@@ -14,21 +14,103 @@
         <div class="my-logo">Xin Jun Loh</div>
         <div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <!-- <li><a href="#projects">Projects</a></li> -->
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
-    <header class="section sec1 header active">
-
-    </header>
-    <main>
-        <section class="section sec2 about"></section>
-        <section class="section sec3 projects"></section>
-        <section class="section sec4 contact"></section>
-    </main>
+    <nav id="hamburger-nav">
+        <div class="my-logo">Xin Jun Loh</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <!-- <li><a href="#projects" onclick="toggleMenu()">Projects</a></li> -->
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section-text">
+            <p class="section-text-p1">Hello, I'm</p>
+            <h1 class="title">Xin Jun Loh</h1>
+            <p class="section-text-p2">Full-stack developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/xjloh.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin-logo.png" alt="LinkedIn profile" class="icon" onclick="window.open('https://www.linkedin.com/in/jamiexjloh/', '_blank')">
+                <img src="./assets/github-logo.png" alt="GitHub profile" class="icon" target="_blank" onclick="window.open('https://github.com/xjloh', '_blank')">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section-text-p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <!-- <div class="section-pic-container">
+            <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic"/>
+          </div> -->
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
+                <h3>Experience</h3>
+                <p>2+ years <br />Frontend Development</p>
+              </div>
+              <div class="details-container">
+                <img src="./assets/education.png" alt="Education icon" class="icon"/>
+                <h3>Education</h3>
+                <p>B.Sc. Bachelors Degree</p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+                reprehenderit et laborum, rem, dolore eum quod voluptate
+                exercitationem nobis, nihil esse debitis maxime facere minus sint
+                delectus velit in eos quo officiis explicabo deleniti dignissimos.
+                Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+                reiciendis ea magnam? Nulla, impedit fuga!
+              </p>
+            </div>
+          </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
+    </section>
+    <section id="contact">
+        <p class="section-text-p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
+            <p><a href="mailto:xinjun978@gmail.com">xinjun978@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img src="./assets/linkedin-logo.png" alt="LinkedIn icon" class="icon contact-icon"/>
+            <p><a target="_blank" href="https://www.linkedin.com">LinkedIn</a></p>
+          </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <!-- <li><a href="#projects">Projects</a></li> -->
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2023 Xin Jun Loh. All Rights Reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
