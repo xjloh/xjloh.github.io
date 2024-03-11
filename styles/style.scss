@@ -23,7 +23,6 @@
 body {
     font-family: "Courier Prime", monospace;
     background-color: white;
-    font-size: 1.1rem;
     transition: all .4s ease-in-out;
     color: black;
 }
@@ -39,6 +38,7 @@ a, .btn {
 
 // Desktop navbar
 nav {
+    display: flex;
     height: 17vh;
     align-items: center;
     justify-content: space-around;
@@ -119,10 +119,10 @@ nav {
     li {
         list-style: none;
     }
+}    
 
-    .open {
-        max-height: 300px;
-    }
+.menu-links.open {
+    max-height: 300px;
 }
 
 .hamburger-icon.open {
@@ -341,12 +341,117 @@ footer {
 }
 
 // Mobile view
-@media screen and (max-width: 800px) {
-    #hamburger-nav {
-        display: flex;
+@media screen and (max-width: 1400px) {
+    #profile {
+      height: 83vh;
+      margin-bottom: 6rem;
     }
 
+    .about-containers {
+      flex-wrap: wrap;
+    }
+
+    #contact {
+      height: fit-content;
+    }
+}
+
+@media screen and (max-width: 1200px) {
     #main-nav {
-        display: none;
+      display: none;
+    }
+
+    #hamburger-nav {
+      display: flex;
+    }
+
+    #profile,
+    .section-container {
+      display: block;
+    }
+
+    .arrow {
+      display: none;
+    }
+
+    section,
+    .section-container {
+      height: fit-content;
+    }
+
+    section {
+      margin: 0 5%;
+    }
+
+    .section-pic-container {
+      width: 275px;
+      height: 275px;
+      margin: 0 auto 2rem;
+    }
+
+    .about-containers {
+      margin-top: 0;
+    }
+
+  }
+
+@media screen and (max-width: 600px) {
+    #contact,
+    footer {
+      height: 40vh;
+    }
+
+    #profile {
+      height: 83vh;
+      margin-bottom: 0;
+    }
+
+    footer nav {
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+      flex-wrap: wrap;
+    }
+
+    .contact-info-container {
+      margin: 0;
+    }
+
+    .contact-info-container p,
+    .nav-links li a {
+      font-size: 1rem;
+    }
+
+
+    .logo {
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    .section-pic-container {
+      width: auto;
+      height: 46vw;
+      justify-content: center;
+    }
+
+    .section-text-p2 {
+      font-size: 1.25rem;
+    }
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .text-container {
+      text-align: justify;
     }
 }

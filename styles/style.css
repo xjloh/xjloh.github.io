@@ -7,7 +7,6 @@
 body {
   font-family: "Courier Prime", monospace;
   background-color: white;
-  font-size: 1.1rem;
   transition: all 0.4s ease-in-out;
   color: black;
 }
@@ -20,16 +19,14 @@ a, .btn {
   transition: all 300ms ease;
 }
 
-nav, .nav-links {
-  display: flex;
-}
-
 nav {
+  display: flex;
   height: 17vh;
   align-items: center;
   justify-content: space-around;
 }
 nav .nav-links {
+  display: flex;
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
@@ -94,7 +91,6 @@ nav :hover {
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
-
 .menu-links li {
   list-style: none;
 }
@@ -106,25 +102,16 @@ nav :hover {
 .hamburger-icon.open span:first-child {
   transform: rotate(45deg) translate(10px, 5px);
 }
-
 .hamburger-icon.open span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger-icon.open span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
 .hamburger-icon span:first-child {
   transform: none;
-}
-
-.hamburger-icon span:first-child {
   opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
 }
 
 section {
@@ -145,13 +132,6 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
-}
-
-.section-pic-container {
-  display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
 }
 
 .section-text {
@@ -318,16 +298,100 @@ footer {
   height: 26vh;
   margin: 0 1rem;
 }
-
 footer p {
   text-align: center;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #main-nav {
+    display: none;
+  }
   #hamburger-nav {
     display: flex;
   }
-  #main-nav {
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
     display: none;
+  }
+  section,
+  .section-container {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section-pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  footer nav {
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section-pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section-text-p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
   }
 }/*# sourceMappingURL=style.css.map */
