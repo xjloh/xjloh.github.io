@@ -4,27 +4,33 @@
     list-style: none;
 }
 
-// :root {
-//     --color-primary: #191d2b;
-//     --color-secondary: #27AE60;
-//     --color-white: #FFFFFF;
-//     --color-black: #000;
-//     --color-grey0: #f8f8f8;
-//     --color-grey-1: #dbe1e8;
-//     --color-grey-2: #b2becd;
-//     --color-grey-3: #6c7983;
-//     --color-grey-4: #454e56;
-//     --color-grey-5: #2a2e35;
-//     --color-grey-6: #12181b;
-//     --br-sm-2: 14px;
-//     --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
-// }
+:root {
+    --color-primary: white;
+    --color-secondary: black;
+    --color-text: black;
+    --color-button-background:#353535;
+    --color-button-hover: black;
+    --color-button-border: black;
+    --color-button-text: black;
+    --color-button-1-text: white;
+}
+
+.dark-mode {
+    --color-primary: #0C0030;
+    --color-secondary: white;
+    --color-text: white;
+    --color-button-background:#9777D9;
+    --color-button-hover: #9777D9;
+    --color-button-border: #9777D9;
+    --color-button-text: #9777D9;
+    --color-button-1-text: #9777D9;
+}
 
 body {
     font-family: "Courier Prime", monospace;
-    background-color: white;
+    background-color: var(--color-primary);
     transition: all .4s ease-in-out;
-    color: black;
+    color: var(--color-secondary);
 }
 
 html {
@@ -33,7 +39,16 @@ html {
 
 // Transition
 a, .btn {
-    transition: all 300ms ease;
+    transition: all 0.3 ease;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:visited {
+    color: unset;
 }
 
 // Desktop navbar
@@ -50,15 +65,9 @@ nav {
         font-size: 1.5rem;
     }
 
-    a {
-        text-decoration: none;
-        // text-decoration-color: white;
-    }
-
     a:hover {
         text-decoration: underline;
         text-underline-offset: 1rem;
-        // text-decoration-color: rgb(181, 181, 181);
     }
 
     .my-logo {
@@ -202,6 +211,10 @@ section {
 }
 
 // Buttons
+button {
+    cursor: pointer;
+}
+
 .btn-container {
     display: flex;
     justify-content: center;
@@ -216,22 +229,29 @@ section {
     border-radius: 2rem;
 }
 
-.btn-color-1,
-.btn-color-2:hover {
-    background: rgb(53, 53, 53);
+.btn-color-1 {
+    background: var(--color-button-background);
     color: white;
+    border-style: solid;
+    border-color: var(--color-button-border);
 }
 
 .btn-color-1:hover {
-    background: rgb(0, 0, 0);
+    background: var(--color-secondary);
+    color: var(--color-button-1-text);
+    border-color: var(--color-button-border);
 }
 
 .btn-color-2 {
     background: none;
+    border-style: solid;
+    color: var(--color-button-text);
+    border-color: var(--color-button-border);
 }
 
 .btn-color-2:hover {
-    border: rgb(255, 255, 255) 0.1rem solid;
+    background: var(--color-button-background);
+    color: white;
 }
 
 .btn-container {
@@ -272,7 +292,7 @@ section {
 .details-container {
     padding: 1.5rem;
     flex: 1;
-    background: white;
+    background: var(--color-primary);
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
@@ -337,6 +357,86 @@ footer {
 
     p {
         text-align: center;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+// Toggle for dark mode
+.toggle {
+    appearance: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    position: relative !important;
+    border: 0 !important;
+    outline: none !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    display: inline-block !important;
+    width: 40px !important;
+    height: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    // /* To create surface of toggle button */
+    &::after {
+        content: '' !important;
+        position: absolute;
+        left: 0 !important;
+        top: 0 !important;
+        width: 40px !important;
+        height: 24px !important;
+        display: inline-block !important;
+        background: #BDBDBD !important;
+        border-radius: 1rem !important;
+        clear: both !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        z-index: 1;
+    }
+
+    // /* Contents before checkbox to create toggle handle */
+    &::before {
+        content: '' !important;
+        position: absolute !important;
+        left: 2px !important;
+        top: 2px !important;
+        width: 20px !important;
+        height: 20px !important;
+        display: block !important;
+        border-radius: 100% !important;
+        background: white !important;
+        mask-image: url('./../assets/sun-logo.svg');
+        mask-size: contain;
+        mask-position: center center;
+        mask-repeat: no-repeat;
+        margin: 0 !important;
+        padding: 0 !important;
+        z-index: 2;
+    }
+
+    // /* Shift the handle to right on check event */
+    &:checked::before {
+        left: 18px !important;
+        mask-image: url('./../assets/moon.svg');
+        mask-size: contain;
+        mask-position: center center;
+        mask-repeat: no-repeat;
+    }
+
+    // /* Background color when toggle button will be active */
+    &:checked::after {
+        background: #4caf50 !important;
+    }
+
+    /* Transition for smoothness */
+    &,
+    &::before,
+    &::after,
+    &:checked::before,
+    &:checked::after {
+        transition: ease 0.3s !important;
     }
 }
 
