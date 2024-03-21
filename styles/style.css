@@ -52,7 +52,6 @@ a:visited {
 
 nav {
   display: flex;
-  height: 17vh;
   align-items: center;
   justify-content: space-around;
 }
@@ -244,10 +243,6 @@ button {
   gap: 1rem;
 }
 
-#about {
-  position: relative;
-}
-
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -343,6 +338,15 @@ footer p {
 
 .hide {
   display: none;
+}
+
+#main-nav {
+  position: fixed;
+  width: -webkit-fill-available;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  height: 14vh;
+  border-bottom: 1px solid rgba(31, 31, 31, 0.05);
 }
 
 .toggle {

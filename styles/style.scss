@@ -54,7 +54,6 @@ a:visited {
 // Desktop navbar
 nav {
     display: flex;
-    height: 17vh;
     align-items: center;
     justify-content: space-around;
 
@@ -259,11 +258,6 @@ button {
 }
 
 // About section
-
-#about {
-    position: relative;
-}
-  
 .about-containers {
     gap: 2rem;
     margin-bottom: 2rem;
@@ -362,6 +356,15 @@ footer {
 
 .hide {
     display: none;
+}
+
+// Floating nav bar
+#main-nav {
+    position: fixed;
+    width: -webkit-fill-available;
+    backdrop-filter: blur(25px);
+    height: 14vh;
+    border-bottom: 1px solid rgba(31, 31, 31, 0.05);
 }
 
 // Toggle for dark mode
