@@ -1,15 +1,17 @@
 function toggleMenu() {
     const menu = document.querySelector('.menu-links');
     const icon = document.querySelector('.hamburger-icon');
+    const hamburger = document.querySelector('#hamburger-nav');
 
-    if (menu && icon) {
+    if (menu && icon && hamburger) {
         menu.classList.toggle('open');
         icon.classList.toggle('open');
+        hamburger.classList.toggle('open');
     }
 }
 
 // For toggling dark mode.
-const button = document.querySelector('.theme-btn');
+const themeButton = document.querySelector('.theme-btn');
 const githubIcon = document.querySelector('.github-icon');
 const githubIconDark = document.querySelector('.github-icon-dark');
 const educationLight = document.querySelector('.education-light');
@@ -17,8 +19,8 @@ const educationDark = document.querySelector('.education-dark');
 const experienceLight = document.querySelector('.experience-light');
 const experienceDark = document.querySelector('.experience-dark');
 
-if (button) {
-    button.addEventListener('click', () => {
+document.querySelectorAll('.theme-btn').forEach( $element => {
+    $element.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         githubIcon ? githubIcon.classList.toggle('hide') : '';
         githubIconDark ? githubIconDark.classList.toggle('hide') : '';
@@ -27,29 +29,33 @@ if (button) {
         experienceLight ? experienceLight.classList.toggle('hide') : '';
         experienceDark ? experienceDark.classList.toggle('hide') : '';
     });
-}
+});
 
 // For scrolling to different sections of a page
-const scrollToProfile = document.querySelector('.my-logo');
 const profileSection = document.querySelector('section#profile');
-if (scrollToProfile && profileSection) {
-    scrollToProfile.addEventListener('click', () => {
-        profileSection.scrollIntoView({behavior: "smooth"});
+if (profileSection) {
+    document.querySelectorAll('.my-logo').forEach($element => {
+        $element.addEventListener('click', () => {
+            profileSection.scrollIntoView({behavior: "smooth"});
+        });
     });
 }
 
-const scrollToAbout = document.querySelector('#scroll-about');
 const aboutSection = document.querySelector('section#about');
-if (scrollToAbout && aboutSection) {
-    scrollToAbout.addEventListener('click', () => {
-        aboutSection.scrollIntoView({behavior: "smooth"});
+if (aboutSection) {
+    document.querySelectorAll('.scroll-about').forEach($element => {
+        $element.addEventListener('click', () => {
+            aboutSection.scrollIntoView({behavior: "smooth"});
+        });
     });
 }
 
 const scrollToContact = document.querySelector('#scroll-contact');
 const contactSection = document.querySelector('section#contact');
-if (scrollToContact && contactSection) {
-    scrollToContact.addEventListener('click', () => {
-        contactSection.scrollIntoView({behavior: "smooth"});
+if (contactSection) {
+    document.querySelectorAll('.scroll-contact').forEach($element => {
+        $element.addEventListener('click', () => {
+            contactSection.scrollIntoView({behavior: "smooth"});
+        });
     });
 }
