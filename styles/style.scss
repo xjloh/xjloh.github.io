@@ -154,15 +154,10 @@ nav {
 
 // Section
 section {
-    padding-top: 4vh;
-    height: 96vh;
+    height: 100vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
-}
-
-.section-container {
-    display: flex;
 }
 
 // Profile section
@@ -170,7 +165,6 @@ section {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 80vh;
 }
   
 .section-text {
@@ -258,6 +252,12 @@ button {
 }
 
 // About section
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .about-containers {
     gap: 2rem;
     margin-bottom: 2rem;
@@ -294,8 +294,9 @@ button {
 }
   
 .section-container {
+    display: flex;
+    justify-content: center;
     gap: 4rem;
-    height: 80%;
 }
   
 .section__pic-container {
@@ -310,7 +311,6 @@ button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 70vh;
 }
   
 .contact-info-upper-container {
@@ -346,7 +346,6 @@ button {
 
 // Footer section
 footer {
-    height: 26vh;
     margin: 0 1rem;
 
     p {
@@ -363,7 +362,7 @@ footer {
     position: fixed;
     width: -webkit-fill-available;
     backdrop-filter: blur(25px);
-    height: 14vh;
+    height: 80px;
     border-bottom: 1px solid rgba(31, 31, 31, 0.05);
 }
 
