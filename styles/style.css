@@ -511,4 +511,15 @@ footer p {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+}
+
+.floating-effect {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+.floating-effect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=style.css.map */
