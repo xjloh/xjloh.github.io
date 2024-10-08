@@ -552,6 +552,9 @@ footer {
     border: black 1px solid;
     padding: 1rem;
     cursor: pointer;
+}
+
+.experience-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -570,4 +573,12 @@ footer {
       transform: translateY(-10px); // Adjust the vertical displacement as needed
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); // Add a subtle shadow for depth
     }
-  }
+}
+
+.expand-indicator {
+    transition: transform 0.3s ease-in-out;
+}
+
+.expand {
+    transform: rotate(90deg);
+}

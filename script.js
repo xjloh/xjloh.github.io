@@ -59,3 +59,18 @@ if (contactSection) {
         });
     });
 }
+
+// For expanding/shrinking experience container when clicked
+document.querySelectorAll('.experience-container').forEach( $element => {
+    $element.addEventListener('click', () => {
+        const arrow = $element.querySelector('.expand-indicator');
+        if (arrow) {
+            arrow.classList.toggle('expand');
+        }
+
+        const details = $element.querySelector('.experience-details');
+        if (details) {
+            details.classList.toggle('hide');
+        }
+    })
+});

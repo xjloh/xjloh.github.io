@@ -510,6 +510,9 @@ footer p {
   border: black 1px solid;
   padding: 1rem;
   cursor: pointer;
+}
+
+.experience-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -527,4 +530,12 @@ footer p {
 .floating-effect:hover {
   transform: translateY(-10px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.expand-indicator {
+  transition: transform 0.3s ease-in-out;
+}
+
+.expand {
+  transform: rotate(90deg);
 }/*# sourceMappingURL=style.css.map */
