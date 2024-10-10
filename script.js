@@ -60,6 +60,13 @@ if (contactSection) {
     });
 }
 
+function scrollToSection(sectionId) {
+    var section = document.querySelector(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 // For expanding/shrinking experience container when clicked
 document.querySelectorAll('.experience-container').forEach( $element => {
     $element.addEventListener('click', () => {

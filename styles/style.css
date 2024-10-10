@@ -288,7 +288,7 @@ button {
 .section-container {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 1rem;
 }
 
 .section__pic-container {
@@ -538,4 +538,8 @@ footer p {
 
 .expand {
   transform: rotate(90deg);
+}
+
+.column {
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
