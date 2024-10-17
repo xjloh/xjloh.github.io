@@ -447,6 +447,10 @@ footer {
     }
 }
 
+.resume-mobile {
+    display: none;
+}
+
 // Mobile view
 @media screen and (max-width: 1400px) {
     #profile {
@@ -536,6 +540,21 @@ footer {
 
     .text-container {
       text-align: justify;
+    }
+
+    .resume-desktop {
+        display: none;
+    }
+
+    .resume-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 11rem;
     }
 }
 
