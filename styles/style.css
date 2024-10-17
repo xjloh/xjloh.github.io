@@ -79,6 +79,7 @@ nav :hover {
   height: 60px;
   border-bottom: 1px solid rgba(31, 31, 31, 0.05);
   transition: all 0.3 ease-in-out;
+  z-index: 1;
 }
 
 .hamburger-menu {
@@ -352,6 +353,7 @@ footer p {
           backdrop-filter: blur(25px);
   height: 80px;
   border-bottom: 1px solid rgba(31, 31, 31, 0.05);
+  z-index: 1;
 }
 
 .toggle {
@@ -540,7 +542,6 @@ footer p {
 .floating-effect {
   position: relative;
   transition: transform 0.3s ease-in-out;
-  z-index: 1;
 }
 .floating-effect:hover {
   transform: translateY(-10px);

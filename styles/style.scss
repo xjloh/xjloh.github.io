@@ -83,6 +83,7 @@ nav {
     height: 60px;
     border-bottom: 1px solid rgba(31, 31, 31, 0.05);
     transition: all 0.3 ease-in-out;
+    z-index: 1;
 }
 
 .hamburger-menu {
@@ -369,6 +370,7 @@ footer {
     backdrop-filter: blur(25px);
     height: 80px;
     border-bottom: 1px solid rgba(31, 31, 31, 0.05);
+    z-index: 1;
 }
 
 // Toggle for dark mode
@@ -585,7 +587,6 @@ footer {
 .floating-effect {
     position: relative;
     transition: transform 0.3s ease-in-out;
-    z-index: 1; // Ensure it appears above other elements
   
     &:hover {
       transform: translateY(-10px); // Adjust the vertical displacement as needed
@@ -605,6 +606,7 @@ footer {
     flex-direction: column;
 }
 
+// Resume dropdown for desltop view
 .dropdown {
     position: relative;
 
