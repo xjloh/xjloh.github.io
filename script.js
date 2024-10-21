@@ -81,3 +81,17 @@ document.querySelectorAll('.experience-container').forEach( $element => {
         }
     })
 });
+
+// For opening/closing dropdown for resume in mobile view
+const resumeMobile = document.querySelector('.resume-dropdown-mobile');
+resumeMobile.addEventListener('click', () => {
+    const arrow = resumeMobile.querySelector('.resume-expand-indicator');
+    if (arrow) {
+        arrow.classList.toggle('expand');
+    }
+
+    const resumes = resumeMobile.querySelector('.dropdown-content');
+    if (resumes) {
+        resumes.classList.toggle('hide');
+    }
+});

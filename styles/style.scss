@@ -231,12 +231,21 @@ button {
     color: white;
     border-style: solid;
     border-color: var(--color-button-border);
-}
 
-.btn-color-1:hover {
-    background: var(--color-secondary);
-    color: var(--color-button-1-text);
-    border-color: var(--color-button-border);
+    &:hover {
+        background: var(--color-secondary);
+        color: var(--color-button-1-text);
+        border-color: var(--color-button-border);
+    }
+
+    @media (max-width: 768px) {
+        &:hover {
+            background: var(--color-button-background);
+            color: white;
+            border-style: solid;
+            border-color: var(--color-button-border);
+        }
+    }
 }
 
 .btn-color-2 {
@@ -244,11 +253,18 @@ button {
     border-style: solid;
     color: var(--color-button-text);
     border-color: var(--color-button-border);
-}
 
-.btn-color-2:hover {
-    background: var(--color-button-background);
-    color: white;
+    &:hover {
+        background: var(--color-button-background);
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        &:hover {
+            background: none;
+            color: inherit;
+        }
+    }
 }
 
 .btn-container {
@@ -360,7 +376,7 @@ footer {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 // Floating nav bar
@@ -490,7 +506,7 @@ footer {
 
   }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     nav .my-logo {
         font-size: 1.5rem;
     }
@@ -554,10 +570,6 @@ footer {
         align-items: center;
         gap: 1rem;
     }
-
-    .btn {
-        width: 11rem;
-    }
 }
 
 //Experience section
@@ -613,6 +625,12 @@ footer {
     &:hover .dropdown-content {
         display: block;
     }
+
+    @media (max-width: 768px) {
+        &:hover .dropdown-content {
+            display: inherit;
+        }
+    }
 }
 
 .dropdown-content {
@@ -622,6 +640,14 @@ footer {
     min-width: 10rem;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+
+    @media (max-width: 768px) {
+        display: block;
+        left: -2px;
+        top: 52px;
+        width: 164px;
+        min-width: unset;
+    }
 }
 
 .dropdown-content div {
@@ -633,4 +659,10 @@ footer {
     &:hover {
         background-color: #ddd;
     }
+}
+
+.resume-mobile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
