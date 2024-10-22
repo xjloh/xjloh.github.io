@@ -581,9 +581,11 @@ footer {
 }
 
 .experience-container {
-    border: black 1px solid;
     padding: 1rem;
     cursor: pointer;
+    background: var(--color-primary);
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
 }
 
 .experience-info {
