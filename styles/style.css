@@ -319,12 +319,8 @@ button {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: 250, 250, 250;
-  margin: 2rem auto;
-  padding: 0.5rem;
+  align-items: center;
+  gap: 5rem;
 }
 
 .contact-info-container {
@@ -333,10 +329,6 @@ button {
   justify-content: center;
   gap: 0.5rem;
   margin: 1rem;
-}
-
-.contact-info-container p {
-  font-size: larger;
 }
 
 .contact-icon {
@@ -489,7 +481,6 @@ footer p {
   .contact-info-container {
     margin: 0;
   }
-  .contact-info-container p,
   .nav-links li a {
     font-size: 1rem;
   }
@@ -615,4 +606,34 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+}
+
+.email-input {
+  width: 500px;
+  height: 45px;
+  padding-left: 12px;
+  font-family: inherit;
+}
+
+.email-message {
+  padding-left: 12px;
+  width: 500px;
+  height: 150px;
+  padding-top: 10px;
+}
+
+#email-submit {
+  width: 150px;
+  height: 35px;
+  font-family: inherit;
 }/*# sourceMappingURL=style.css.map */

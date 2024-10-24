@@ -189,16 +189,27 @@
         </div>
     </section>
     <section id="contact">
-        <p class="section-text-p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
-          <div class="contact-info-container">
-            <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
-            <p><a href="mailto:xinjun978@gmail.com">xinjun978@gmail.com</a></p>
+          <div>
+            <form id="email-form" method="POST">
+              <h2>Get in Touch</h2>
+              <input type="hidden" name="access_key" value="f7e9715c-a702-491e-9b20-6958de3b46a9">
+              <input class="email-input" type="text" name="name" placeholder="Your name" required>
+              <input class="email-input" type="email" name="email" placeholder="Your email" required>
+              <textarea class="email-message" name="message" placeholder="Your message" required></textarea>
+              <button id="email-submit" class="btn-color-1" type="submit">Send</button>
+              <div id="result"></div>
+          </form>
           </div>
-          <div class="contact-info-container">
-            <img src="./assets/linkedin-logo.png" alt="LinkedIn icon" class="icon contact-icon"/>
-            <p><a target="_blank" href="https://www.linkedin.com">LinkedIn</a></p>
+          <div>
+            <h2>or</h2>
+          </div>
+          <div>
+            <h2>Connect with me on</h2>
+            <div class="contact-info-container">
+              <img src="./assets/linkedin-logo.png" alt="LinkedIn icon" class="icon contact-icon"/>
+              <p><a target="_blank" href="https://www.linkedin.com">LinkedIn</a></p>
+            </div>
           </div>
         </div>
     </section>
