@@ -631,7 +631,7 @@ footer p {
 }
 @media (max-width: 768px) {
   .email-input {
-    width: 35dvh;
+    width: 75dvw;
   }
 }
 
@@ -643,7 +643,7 @@ footer p {
 }
 @media (max-width: 768px) {
   .email-message {
-    width: 35dvh;
+    width: 75dvw;
   }
 }
 
