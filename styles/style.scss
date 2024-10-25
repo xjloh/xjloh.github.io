@@ -340,6 +340,11 @@ button {
     justify-content: center;
     align-items: center;
     gap: 5rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
   
 .contact-info-container {
@@ -509,7 +514,6 @@ footer {
     }
 
     .about-containers,
-    .contact-info-upper-container,
     .btn-container {
       flex-wrap: wrap;
     }
@@ -674,13 +678,21 @@ footer {
     height: 45px;
     padding-left: 12px;
     font-family: inherit;
+
+    @media (max-width: 768px) {
+        width: 35dvh;
+    }
 }
 
 .email-message {
     padding-left: 12px;
     width: 500px;
     height: 150px;
-    padding-top: 10px;
+    padding: 10px;
+
+    @media (max-width: 768px) {
+        width: 35dvh;
+    }
 }
 
 #email-submit {
