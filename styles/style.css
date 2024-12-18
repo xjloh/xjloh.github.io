@@ -6,7 +6,7 @@
   --color-primary: white;
   --color-secondary: black;
   --color-text: black;
-  --color-button-background:#353535;
+  --color-button-background: #353535;
   --color-button-hover: black;
   --color-button-border: black;
   --color-button-text: black;
@@ -14,14 +14,14 @@
 }
 
 .dark-mode {
-  --color-primary: #0C0030;
+  --color-primary: #0c0030;
   --color-secondary: white;
   --color-text: white;
-  --color-button-background:#9777D9;
-  --color-button-hover: #9777D9;
-  --color-button-border: #9777D9;
-  --color-button-text: #9777D9;
-  --color-button-1-text: #9777D9;
+  --color-button-background: #9777d9;
+  --color-button-hover: #9777d9;
+  --color-button-border: #9777d9;
+  --color-button-text: #9777d9;
+  --color-button-1-text: #9777d9;
 }
 
 body {
@@ -35,7 +35,8 @@ html {
   scroll-behavior: smooth;
 }
 
-a, .btn {
+a,
+.btn {
   transition: all 0.3 ease;
 }
 
@@ -391,7 +392,7 @@ footer p {
   width: 40px !important;
   height: 24px !important;
   display: inline-block !important;
-  background: #BDBDBD !important;
+  background: #bdbdbd !important;
   border-radius: 1rem !important;
   clear: both !important;
   margin: 0 !important;
@@ -530,7 +531,6 @@ footer p {
 
 .experience-container {
   padding: 1rem;
-  cursor: pointer;
   background: var(--color-primary);
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
@@ -540,6 +540,7 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .experience-title {
