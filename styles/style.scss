@@ -701,3 +701,64 @@ footer {
   height: 35px;
   font-family: inherit;
 }
+
+// Projects section
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.project-image {
+  height: 164px;
+  width: 100%;
+  object-fit: cover;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 16px;
+  border: 1px solid black;
+  width: 350px;
+  height: 250px;
+}
+
+.project-img-container {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .project-image {
+      opacity: 0.3;
+    }
+
+    .middle {
+      opacity: 1;
+    }
+  }
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}

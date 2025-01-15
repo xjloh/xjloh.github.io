@@ -60,6 +60,16 @@ if (contactSection) {
   });
 }
 
+const scrollToProjects = document.querySelector("#scroll-projects");
+const projectsSection = document.querySelector("section#projects");
+if (projectsSection) {
+  document.querySelectorAll(".scroll-projects").forEach(($element) => {
+    $element.addEventListener("click", () => {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+}
+
 function scrollToSection(sectionId) {
   var section = document.querySelector(sectionId);
   if (section) {
