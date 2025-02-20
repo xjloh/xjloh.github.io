@@ -5,8 +5,11 @@ const Hero = () => {
   return (
     <>
       {/* Hero section */}
-      <section id="profile" className="flex justify-center">
-        <div className="flex flex-col gap-2">
+      <section
+        id="profile"
+        className="flex justify-center flex-stretch h-screen"
+      >
+        <div className="flex flex-col gap-2 self-center">
           <p className="font-semibold text-center">Hello, I&apos;m</p>
           <h1 className="text-5xl text-center font-bold">Loh Xin Jun</h1>
           <p className="font-semibold text-3xl text-center">
@@ -47,13 +50,13 @@ const Hero = () => {
                 <img src="./assets/github-logo-white.png" alt="GitHub profile" class="github-icon-dark icon hide" target="_blank" onclick="window.open('https://github.com/xjloh', '_blank')"> */}
             <Image
               src="/linkedin-logo.png"
-              width={37}
+              width={34}
               height={32}
               alt="LinkedIn logo"
             ></Image>
             <Image
               src="/github-logo.png"
-              width={37}
+              width={32}
               height={32}
               alt="LinkedIn logo"
             ></Image>
