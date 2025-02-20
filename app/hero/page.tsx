@@ -12,7 +12,7 @@ const Hero = () => {
             Full-stack developer
           </p>
           <div className="flex justify-center gap-[1rem]">
-            <div className="dropdown border-2 border-solid border-black">
+            <div className="dropdown border-2 border-solid border-primary bg-secondary">
               <div className="font-semibold p-4 w-[10rem] text-center">
                 Resume
               </div>
@@ -21,7 +21,7 @@ const Hero = () => {
                 {/* <div onclick="window.open('./assets/xjloh-resume-traditional.pdf')">Traditional</div> */}
               </div>
             </div>
-            <div className="border-2 border-solid border-black font-semibold p-4 w-[10rem] text-center">
+            <div className="border-2 border-solid border-primary font-semibold p-4 w-[10rem] text-center bg-primary text-secondary">
               Contact info
             </div>
           </div>

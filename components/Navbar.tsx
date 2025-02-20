@@ -2,18 +2,18 @@
 
 import Link from "next/link";
 import { useState } from "react";
-// import { Menu, Moon, Sun, X } from "lucide-react";
-// import { Button } from "@/components/ui/button";
-// import { useTheme } from "next-themes";
+import { Menu, Moon, Sun, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
 import React from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  //   const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
-  //   const toggleTheme = () => {
-  //     setTheme(theme === "dark" ? "light" : "dark");
-  //   };
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full bg-background shadow-sm z-50">
+      <nav className="fixed w-full bg-background shadow-sm z-50 ">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="text-3xl font-bold text-primary">
@@ -47,18 +47,18 @@ const Navbar = () => {
             ))}
 
             {/* Theme Toggle */}
-            {/* <Button
+            <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
               aria-label="Toggle Theme"
             >
               {theme === "dark" ? <Sun /> : <Moon />}
-            </Button> */}
+            </Button>
           </div>
 
           {/* Mobile Menu Toggle */}
-          {/* <div className="md:hidden">
+          <div className="md:hidden">
             <Button
               variant="ghost"
               size="icon"
@@ -67,7 +67,7 @@ const Navbar = () => {
             >
               {isMenuOpen ? <X /> : <Menu />}
             </Button>
-          </div> */}
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -86,7 +86,7 @@ const Navbar = () => {
               ))}
 
               {/* Mobile Theme Toggle */}
-              {/* <Button
+              <Button
                 variant="outline"
                 className="w-full"
                 onClick={toggleTheme}
@@ -99,7 +99,7 @@ const Navbar = () => {
                 ) : (
                   <Moon className="ml-2" />
                 )}
-              </Button> */}
+              </Button>
             </div>
           </div>
         )}
@@ -109,24 +109,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// "use client";
-
-// import { ThemeProvider } from "next-themes";
-
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en" suppressHydrationWarning>
-//       <body>
-//         <ThemeProvider
-//           attribute="class"
-//           defaultTheme="system"
-//           enableSystem
-//           disableTransitionOnChange
-//         >
-//           {children}
-//         </ThemeProvider>
-//       </body>
-//     </html>
-//   );
-// }
