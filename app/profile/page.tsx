@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
@@ -40,11 +41,23 @@ const Hero = () => {
               </div>
               <div class="btn-color-1 btn" onclick="scrollToSection('section#contact')">Contact info</div>
             </div> */}
-          {/* <div id="socials-container"> */}
-          {/* <img src="./assets/linkedin-logo.png" alt="LinkedIn profile" class="icon" onclick="window.open('https://www.linkedin.com/in/jamiexjloh/', '_blank')">
-                <img src="./assets/github-logo.png" alt="GitHub profile" class="github-icon icon" target="_blank" onclick="window.open('https://github.com/xjloh', '_blank')">
+          <div className="flex justify-center gap-[1rem] mt-[1rem]">
+            {/* <img src="./assets/linkedin-logo.png" alt="LinkedIn profile" class="icon" onclick="window.open('https://www.linkedin.com/in/jamiexjloh/', '_blank')">
+              <img src="./assets/github-logo.png" alt="GitHub profile" class="github-icon icon" target="_blank" onclick="window.open('https://github.com/xjloh', '_blank')">
                 <img src="./assets/github-logo-white.png" alt="GitHub profile" class="github-icon-dark icon hide" target="_blank" onclick="window.open('https://github.com/xjloh', '_blank')"> */}
-          {/* </div> */}
+            <Image
+              src="/linkedin-logo.png"
+              width={37}
+              height={32}
+              alt="LinkedIn logo"
+            ></Image>
+            <Image
+              src="/github-logo.png"
+              width={37}
+              height={32}
+              alt="LinkedIn logo"
+            ></Image>
+          </div>
         </div>
       </section>
     </>
