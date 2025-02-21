@@ -1,11 +1,17 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
-const Hero = () => {
+const Profile = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      {/* Hero section */}
+      {/* Profile section */}
       <section
         id="profile"
         className="flex justify-center flex-stretch h-screen"
@@ -17,34 +23,43 @@ const Hero = () => {
             Full-stack developer
           </p>
           <div className="flex justify-center gap-[1rem]">
-            <div className="dropdown border-2 border-solid border-primary bg-secondary">
-              <div className="font-semibold p-4 w-[10rem] text-center">
+            <div className="relative border-2 border-solid border-primary bg-secondary">
+              <button
+                type="button"
+                className="font-semibold p-4 w-[10rem] text-center"
+                onClick={toggleDropdown}
+              >
                 Resume
-              </div>
-              <div className="dropdown-content">
-                {/* <div onclick="window.open('./assets/xjl-resume-modern.pdf')">Modern</div> */}
-                {/* <div onclick="window.open('./assets/xjloh-resume-traditional.pdf')">Traditional</div> */}
-              </div>
+              </button>
+              {isOpen ? (
+                <>
+                  <div className="absolute mt-1 z-1 min-w-[10rem] origin-top-right divide-y divide-gray-100 bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden">
+                    <Link
+                      href={"/xjl-resume-modern.pdf"}
+                      target="_blank"
+                      className="block px-[16px] py-[12px] text-center text-gray-700 hover:bg-gray-200"
+                      onClick={toggleDropdown}
+                    >
+                      Modern
+                    </Link>
+                    <Link
+                      href={"/xjl-resume-traditional.pdf"}
+                      target="_blank"
+                      className="block px-[16px] py-[12px] text-center text-gray-700 hover:bg-gray-200"
+                      onClick={toggleDropdown}
+                    >
+                      Traditional
+                    </Link>
+                  </div>
+                </>
+              ) : (
+                <></>
+              )}
             </div>
-            <div className="border-2 border-solid border-primary font-semibold p-4 w-[10rem] text-center bg-primary text-secondary">
+            <div className="border-2 border-solid border-primary font-semibold p-4 w-[10rem] text-center bg-primary text-secondary hover:cursor-pointer">
               Contact info
             </div>
           </div>
-          {/* <div class="resume-mobile">
-              <div class="dropdown resume-dropdown-mobile btn btn-color-2">
-                <div class="resume-mobile-btn">
-                  <div>Resume</div>
-                  <div class="resume-expand-indicator">
-                    >
-                  </div>
-                </div>
-                <div class="dropdown-content hide">
-                  <div style="border-bottom: 1px solid #ddd;" onclick="window.open('./assets/xjl-resume-modern.pdf')">Modern</div>
-                  <div onclick="window.open('./assets/xjloh-resume-traditional.pdf')">Traditional</div>
-                </div>
-              </div>
-              <div class="btn-color-1 btn" onclick="scrollToSection('section#contact')">Contact info</div>
-            </div> */}
           <div className="flex justify-center gap-[1rem] mt-[1rem]">
             <Link
               href={"https://www.linkedin.com/in/jamiexjloh/"}
@@ -73,4 +88,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Profile;
