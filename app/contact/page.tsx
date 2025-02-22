@@ -14,9 +14,11 @@ const Contact = () => {
       >
         <Form
           action="/"
-          className="flex flex-col items-center gap-[1rem] border border-black p-[1rem] w-1/2 h-1/2"
+          className="flex flex-col items-center gap-[1rem] border border-primary p-[1rem] w-1/2"
         >
-          <p className="font-bold text-2xl">Get in Touch</p>
+          <p className="font-bold text-2xl underline underline-offset-2">
+            Get in Touch
+          </p>
           {/* <input type="hidden" name="access_key" value="f7e9715c-a702-491e-9b20-6958de3b46a9"> */}
           <input
             className="pl-[12px] border border-stone-900 w-full h-12"
@@ -45,17 +47,19 @@ const Contact = () => {
           <div id="result"></div>
         </Form>
         <div className="">
-          <p className="font-bold text-2xl">Connect with me on</p>
+          <p className="font-bold text-2xl underline underline-offset-2">
+            Connect with me on
+          </p>
           <div className="flex flex-col align-start">
             <Link
               href={"https://www.linkedin.com/in/jamiexjloh/"}
               target="_blank"
             >
-              <div className="flex items-center gap-[0.5rem] mt-[1rem]">
+              <div className="flex items-center gap-[0.5rem] mt-[1rem] ml-[1rem]">
                 <Image
                   src="/linkedin-logo.png"
-                  width={20}
-                  height={20}
+                  width={24}
+                  height={24}
                   alt="LinkedIn logo"
                   className="cursor-default"
                 ></Image>
@@ -63,17 +67,17 @@ const Contact = () => {
               </div>
             </Link>
             <Link href={"mailto:xinjun978@gmail.com"}>
-              <div className="flex items-center gap-[0.5rem] mt-[1rem]">
-                <Mail></Mail>
+              <div className="flex items-center gap-[0.5rem] mt-[1rem] ml-[1rem]">
+                <Mail className="w-[24px] h-[24px]"></Mail>
                 <p>xinjun978@gmail.com</p>
               </div>
             </Link>
             <Link href={"https://github.com/xjloh"} target="_blank">
-              <div className="flex items-center gap-[0.5rem] mt-[1rem]">
+              <div className="flex items-center gap-[0.5rem] mt-[1rem] ml-[1rem]">
                 <Image
                   src="/github-logo.png"
-                  width={20}
-                  height={20}
+                  width={24}
+                  height={24}
                   alt="GitHub logo"
                   className="cursor-default dark:bg-white dark:rounded-[100%]"
                 ></Image>
