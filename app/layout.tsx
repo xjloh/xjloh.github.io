@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 const courierPrime = Courier_Prime({
+  subsets: ["latin"],
   weight: "400",
 });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={courierPrime.className}>
         <ThemeProvider
           attribute="class"

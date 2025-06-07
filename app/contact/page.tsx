@@ -1,51 +1,66 @@
+"use client";
 import { Mail, Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import Form from "next/form";
+import React, { FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 
+async function handleSubmit(event: FormEvent) {
+  event.preventDefault();
+  const formData = new FormData(event.target as HTMLFormElement);
+
+  const response = await fetch("/api/submit", {
+    method: "POST",
+    body: formData,
+  });
+
+  const result = await response.json();
+  if (result.success) {
+    console.log(result);
+  }
+}
+
 const Contact = () => {
+  //f7e9715c-a702-491e-9b20-6958de3b46a9
   return (
     <>
       <section
         id="contact"
         className="flex justify-center items-center flex-stretch h-screen gap-16"
       >
-        <Form
-          action="/"
+        <form
+          onSubmit={handleSubmit}
           className="flex flex-col items-center gap-[1rem] border border-primary p-[1rem] w-1/2"
         >
           <p className="font-bold text-2xl underline underline-offset-2">
             Get in Touch
           </p>
-          {/* <input type="hidden" name="access_key" value="f7e9715c-a702-491e-9b20-6958de3b46a9"> */}
           <input
-            className="pl-[12px] border border-stone-900 w-full h-12"
+            className="pl-[12px] border border-primary w-full h-12"
             type="text"
             name="name"
             placeholder="Your name"
             required
           />
           <input
-            className="pl-[12px] border border-stone-900 w-full h-12"
+            className="pl-[12px] border border-primary w-full h-12"
             type="email"
             name="email"
             placeholder="Your email"
             required
           />
           <textarea
-            className="p-[10px] border border-stone-900 w-full h-1/2"
+            className="p-[10px] border border-primary w-full h-1/2"
             name="message"
             placeholder="Your message"
             required
           ></textarea>
-          <Button id="email-submit" className="btn-color-1" type="submit">
+          <Button type="submit">
             <Send></Send>
             Send
           </Button>
           <div id="result"></div>
-        </Form>
+        </form>
         <div className="">
           <p className="font-bold text-2xl underline underline-offset-2">
             Connect with me on
