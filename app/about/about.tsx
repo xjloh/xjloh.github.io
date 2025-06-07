@@ -15,12 +15,12 @@ const About = () => {
               </h3>
               <ul className="list-none p-0 text-center text-gray-700 space-y-3 w-full dark:text-gray-300">
                 <li className="text-m">
-                  <b className="text-gray-900 dark:text-white">Multilingual</b>{" "}
-                  - English, Mandarin, Malay
+                  <b className="text-gray-900 dark:text-white">Multilingual</b>-
+                  English, Mandarin, Malay
                 </li>
                 <li className="leading-relaxed">
-                  <b className="text-gray-900 dark:text-white">Technologies</b>{" "}
-                  - TS, JS, Angular, PHP, HTML, CSS, SCSS, Java, C, C++, MySQL,
+                  <b className="text-gray-900 dark:text-white">Technologies</b>-
+                  TS, JS, Angular, PHP, HTML, CSS, SCSS, Java, C, C++, MySQL,
                   PostgreSQL, DBeaver, React
                 </li>
               </ul>
