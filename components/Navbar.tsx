@@ -22,6 +22,7 @@ const Navbar = () => {
   const navLinks = [
     { href: "/", label: "Projects" },
     { href: "/about", label: "About" },
+    { href: "/experiences", label: "Experiences" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -45,17 +46,17 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-
-            {/* Theme Toggle */}
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleTheme}
-              aria-label="Toggle Theme"
-            >
-              {theme === "dark" ? <Sun /> : <Moon />}
-            </Button>
           </div>
+
+          {/* Theme Toggle */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+          >
+            {theme === "dark" ? <Sun /> : <Moon />}
+          </Button>
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden">
