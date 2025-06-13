@@ -92,6 +92,7 @@ const ExperienceCard: React.FC<IExperienceCard> = ({
   return (
     <div
       className={`
+        flex-1 min-w-[300px] mb-4 md:mb-0
         relative
         bg-white
         rounded-lg
@@ -187,17 +188,20 @@ const ExperienceCard: React.FC<IExperienceCard> = ({
   );
 };
 
-// export default ExperienceCard;
-
 const Experiences = () => {
   return (
     <>
-      <section id="experiences" className="flex flex-col">
-        <h1 className="text-5xl text-center font-bold">My experience</h1>
-        <div className="flex flex-row">
-          <ExperienceCard {...peachPay}></ExperienceCard>
-          <ExperienceCard {...inTouch}></ExperienceCard>
-          <ExperienceCard {...ECG}></ExperienceCard>
+      <section
+        id="experiences"
+        className="flex justify-center items-center flex-stretch h-screen gap-16"
+      >
+        <div className="flex flex-col">
+          <h1 className="text-5xl text-center font-bold">My experience</h1>
+          <div className="flex flex-row flex-wrap gap-x-4">
+            <ExperienceCard {...peachPay}></ExperienceCard>
+            <ExperienceCard {...inTouch}></ExperienceCard>
+            <ExperienceCard {...ECG}></ExperienceCard>
+          </div>
         </div>
       </section>
     </>
