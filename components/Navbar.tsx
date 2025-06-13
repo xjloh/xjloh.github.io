@@ -52,8 +52,7 @@ const Navbar = () => {
               <div
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
-                className="text-foreground hover:text-primary transition-colors text-xl px-3 py-2 rounded-md cursor-pointer
-                       hover:underline hover:scale-105 transition-all duration-200 ease-in-out transform origin-center"
+                className="text-foreground hover:text-primary text-xl px-3 py-2 rounded-md cursor-pointer hover:underline hover:scale-105 transition-all duration-200 ease-in-out transform origin-center"
               >
                 {link.label}
               </div>
