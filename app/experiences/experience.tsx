@@ -31,7 +31,7 @@ const peachPay: IExperienceCard = {
   introduction:
     "PeachPay is a software company founded in 2020 that specializes in streamlining the checkout process for customers with minimal technical issues, thus improving sales volumes and reducing cart abandonment. Additionally, PeachPay offers multiple different features such as customizable checkout window, currency switcher, payment methods (Stripe, Square, PayPal, etc) and many more. With all that features, PeachPay aims to improve the online e-commerce experience for both customers and merchants.",
   achievements: [
-    "Played a core role in developing early stages of the PeachPay plugin that raised $2 million dollars in venture capital, details here.", // Keep the 'details here' for the custom parsing
+    "Played a core role in developing early stages of the PeachPay plugin that raised $2 million dollars in venture capital, details here.",
     "Increased sales volume from $100 thousand to $1 million per month in one year through the implementation of new features and improvements to the PeachPay plugin.",
   ],
   companyLink: "https://peachpay.app/",
@@ -199,7 +199,7 @@ const Experiences = () => {
         id="experiences"
         className="flex justify-center items-center flex-stretch h-screen gap-16"
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-[2rem] md:mx-[20px]">
           <h1 className="text-5xl text-center font-bold">My experience</h1>
           <div className="flex flex-row flex-wrap gap-x-4">
             <ExperienceCard {...peachPay}></ExperienceCard>
