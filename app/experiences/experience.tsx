@@ -93,6 +93,7 @@ const ExperienceCard: React.FC<IExperienceCard> = ({
     <div
       className={`
         flex-1 min-w-[300px] mb-4 md:mb-0
+        dark:bg-gray-800
         relative
         bg-white
         rounded-lg
@@ -105,7 +106,6 @@ const ExperienceCard: React.FC<IExperienceCard> = ({
           isExpanded ? "max-h-screen" : "max-h-48"
         } {/* Adjust max-h-48 as needed for initial height */}
         hover:shadow-lg
-        floating-effect
         mb-6
       `}
       onClick={toggleExpand}
@@ -113,10 +113,12 @@ const ExperienceCard: React.FC<IExperienceCard> = ({
       {/* Experience Info (Always visible) */}
       <div className="flex items-center justify-center mb-4">
         <div className="flex flex-col items-center">
-          <h1 className="text-3xl font-bold text-gray-800">{companyName}</h1>
+          <h1 className="text-3xl font-bold text-gray-800 dark:text-white">
+            {companyName}
+          </h1>
           <h2 className="text-1xl">{location}</h2>
-          <p className="text-md text-gray-600">{jobTitle}</p>
-          <p className="text-md text-gray-600">({duration})</p>
+          <p className="text-md text-gray-600 dark:text-white">{jobTitle}</p>
+          <p className="text-md text-gray-600 dark:text-white">({duration})</p>
         </div>
       </div>
 
@@ -131,20 +133,22 @@ const ExperienceCard: React.FC<IExperienceCard> = ({
           }
         `}
       >
-        <p className="text-gray-700 mt-4">
-          <b>Skills:</b> {skills}
+        <p className="text-gray-700 mt-4 dark:text-gray-300">
+          <b className="dark:text-white">Skills:</b> {skills}
         </p>
-        <p className="text-gray-700 mt-2">
-          <b>Testing suite:</b> {testingSuite}
+        <p className="text-gray-700 mt-2 dark:text-gray-300">
+          <b className="dark:text-white">Testing suite:</b> {testingSuite}
         </p>
         <br />
-        <h3 className="text-xl font-semibold text-gray-800">
+        <h3 className="text-xl font-semibold text-gray- dark:text-white">
           Brief introduction:
         </h3>
-        <p className="text-gray-700 mt-2">{introduction}</p>
+        <p className="text-gray-700 mt-2 dark:text-gray-300">{introduction}</p>
         <br />
-        <h3 className="text-xl font-semibold text-gray-800">Achievements:</h3>
-        <ul className="list-disc list-inside text-gray-700 mt-2">
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+          Achievements:
+        </h3>
+        <ul className="list-disc list-inside text-gray-700 mt-2 dark:text-gray-300">
           {achievements.map((achievement, index) => (
             <li key={index} className="mb-1">
               {/* Basic parsing for "here" link if it's consistently structured */}
@@ -170,7 +174,7 @@ const ExperienceCard: React.FC<IExperienceCard> = ({
         <br />
         {companyLink &&
           companyLinkText && ( // Conditionally render if both link and text exist
-            <p className="text-gray-700">
+            <p className="text-gray-700 dark:text-gray-300">
               Click{" "}
               <a
                 href={companyLink}
