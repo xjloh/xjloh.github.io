@@ -30,32 +30,35 @@ const Contact = () => {
       >
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-center gap-[1rem] border border-primary p-[1rem] w-1/2"
+          className="flex flex-col items-center gap-[1rem] border border-primary p-[1rem] w-1/2 dark:border-none dark:bg-gray-800 rounded-lg"
         >
-          <p className="font-bold text-2xl underline underline-offset-2">
+          <p className="font-bold text-2xl underline underline-offset-2 dark:text-white">
             Get in Touch
           </p>
           <input
-            className="pl-[12px] border border-primary w-full h-12"
+            className="pl-[12px] border border-primary w-full h-12 dark:border-none"
             type="text"
             name="name"
             placeholder="Your name"
             required
           />
           <input
-            className="pl-[12px] border border-primary w-full h-12"
+            className="pl-[12px] border border-primary w-full h-12 dark:border-none"
             type="email"
             name="email"
             placeholder="Your email"
             required
           />
           <textarea
-            className="p-[10px] border border-primary w-full h-1/2"
+            className="p-[10px] border border-primary w-full h-1/2 dark:border-none"
             name="message"
             placeholder="Your message"
             required
           ></textarea>
-          <Button type="submit">
+          <Button
+            type="submit"
+            className="dark:bg-transparent dark:text-white border border-primary"
+          >
             <Send></Send>
             Send
           </Button>
