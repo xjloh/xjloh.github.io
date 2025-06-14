@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Profile from "./profile/page";
+import Profile from "./profile/profile";
 import Contact from "./contact/page";
 import About from "./about/about";
 import Experiences from "./experiences/experience";
