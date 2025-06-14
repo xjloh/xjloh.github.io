@@ -36,11 +36,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full bg-background shadow-sm z-50 ">
+      <nav className="fixed w-full shadow-sm z-50 navbar-blur">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           {/* Logo */}
           <div
-            className="text-3xl font-bold text-primary cursor-pointer"
+            className="text-3xl font-bold text-primary cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out transform origin-center"
             onClick={() => scrollTo("profile")}
           >
             xjl__

@@ -26,7 +26,7 @@ const Contact = () => {
     <>
       <section
         id="contact"
-        className="flex justify-center items-center flex-stretch h-screen gap-16"
+        className="flex justify-center items-center flex-stretch h-screen gap-16 bg-gray-50 dark:bg-slate-900"
       >
         <form
           onSubmit={handleSubmit}

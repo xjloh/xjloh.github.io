@@ -5,7 +5,7 @@ const About = () => {
     <>
       <section
         id="about"
-        className="flex justify-center items-center flex-stretch h-screen gap-16"
+        className="flex justify-center items-center flex-stretch h-screen gap-16 bg-gray-50 dark:bg-slate-900"
       >
         <div className="flex flex-col justify-center">
           <p className="text-sm text-center">Get To Know More</p>
