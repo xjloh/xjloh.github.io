@@ -21,9 +21,9 @@ const Navbar = () => {
 
   const navLinks = [
     { id: "profile", label: "Profile" },
-    { id: "projects", label: "Projects" },
     { id: "about", label: "About" },
     { id: "experiences", label: "Experiences" },
+    { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
   ];
 
