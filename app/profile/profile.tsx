@@ -23,7 +23,7 @@ const Profile = () => {
             Full-stack developer
           </p>
           <div className="flex justify-center gap-[1rem]">
-            <div className="relative border-2 border-solid border-primary bg-secondary">
+            <div className="relative border-2 border-solid border-primary">
               <button
                 type="button"
                 className="font-semibold p-4 w-[10rem] text-center"
