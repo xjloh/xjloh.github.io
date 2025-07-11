@@ -64,8 +64,9 @@ const About = () => {
                     <b className="text-gray-900 dark:text-white">
                       Weekly routine:{" "}
                     </b>
-                    Workout on Mon, Wed, Thur, Fri (and volleyball). Badminton
-                    on Tue and rest on the weekends
+                    Gym on Mon, Thur, Fri, Sat (Cardio).
+                    Badminton on Tue, Volleyball on Fri.
+                    Rest on Wed and Sun.
                   </li>
                 </ul>
               </div>
